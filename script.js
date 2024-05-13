@@ -8,6 +8,8 @@ let winPatterns = [
     [0, 4, 8], [2, 4, 6],
 ];
 let restart = document.getElementById('reset');
+let mesg = document.getElementById('mesg');
+let playerDisplay = document.querySelector('.display-player');
 
 function cellClicked(cellIndex) {
     if (!gameEnd && board[cellIndex] === '') {
@@ -23,7 +25,10 @@ function cellClicked(cellIndex) {
             document.getElementById('mesg').textContent = 'Ничья!';
             gameEnd = true;
         } else {
+            playerDisplay.classList.remove(`player${currentPlayer}`);
             currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+            playerDisplay.innerText = currentPlayer;
+            playerDisplay.classList.add(`player${currentPlayer}`);
         }
     }
 }

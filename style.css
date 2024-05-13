@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    color: #ff9120;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,11 +50,11 @@ p {
 }
 
 .cell[data-value="X"] {
-    color: #FFC000;
+    color: #428036;
 }
 
 .cell[data-value="O"] {
-    color: #C00000;
+    color: rgb(32, 112, 158);
 }
 
 .playerX {
