@@ -19,7 +19,8 @@ function cellClicked(cellIndex) {
         board[cellIndex] = currentPlayer;
 
         if (checkWinner(currentPlayer)) {
-            document.getElementById('mesg').textContent = `Игрок ${currentPlayer} победил!`
+            document.getElementById('mesg').textContent = `Игрок ${currentPlayer} победил!`;
+            mesg.classList.add(`player${currentPlayer}`);
             gameEnd = true;
         } else if (boardFull()) {
             document.getElementById('mesg').textContent = 'Ничья!';
